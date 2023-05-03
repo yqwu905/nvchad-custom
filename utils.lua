@@ -1,4 +1,4 @@
-local utils =  {}
+local utils = {}
 
 utils.runner = {
   c = function()

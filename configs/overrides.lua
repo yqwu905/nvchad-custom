@@ -36,9 +36,15 @@ M.mason = {
     "deno",
     "prettier",
 
+    -- python
+    "jedi-language-server",
+    "yapf",
+
     -- c/cpp stuff
     "clangd",
     "clang-format",
+    "cmake-language-server",
+    "xmlformatter",
   },
 }
 

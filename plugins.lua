@@ -12,6 +12,10 @@ local plugins = {
           require "custom.configs.null-ls"
         end,
       },
+      {
+        "nvimdev/lspsaga.nvim",
+        opts = {},
+      },
     },
     config = function()
       require "plugins.configs.lspconfig"
@@ -72,8 +76,57 @@ local plugins = {
 
   {
     "akinsho/toggleterm.nvim",
+    init = function()
+      require("core.utils").load_mappings "toggleterm"
+    end,
     cmd = { "ToggleTerm" },
     opts = {},
+  },
+
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
+    "TimUntersberger/neogit",
+    dependencies = {
+      {
+        "nvim-lua/plenary.nvim",
+      },
+    },
+    opts = {
+      integrations = {
+        diffview = true,
+      },
+    },
+    cmd = { "Neogit" },
+  },
+
+  {
+    "sindrets/diffview.nvim",
+    init = function()
+      require("core.utils").load_mappings "diffview"
+    end,
+    opts = {},
+    cmd = { "DiffviewFileHistory", "DiffviewOpen" },
+  },
+
+  {
+    "kevinhwang91/nvim-bqf",
+    opts = {},
+    event = "VeryLazy",
+  },
+
+  {
+    "yqwu905/interestingwords.nvim",
+    opts = {},
+    dir = "C:\\Users\\pingl\\source\\repos\\interestingwords.nvim",
+    lazy = false,
+    init = function()
+      require("core.utils").load_mappings "interestingwords"
+    end,
   },
 }
 
