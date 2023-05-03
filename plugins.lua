@@ -122,8 +122,13 @@ local plugins = {
   {
     "yqwu905/interestingwords.nvim",
     opts = {},
-    dir = "C:\\Users\\pingl\\source\\repos\\interestingwords.nvim",
-    lazy = false,
+    cmd = {
+      "InteresingWordsNormalSearch",
+      "InteresingWordsJumpPrev",
+      "InteresingWordsJumpNext",
+      "InteresingWordsClearHighlight",
+      "InteresingWordsVisualSearch",
+    },
     init = function()
       require("core.utils").load_mappings "interestingwords"
     end,
