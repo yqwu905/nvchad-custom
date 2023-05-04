@@ -1,6 +1,8 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
+capabilities.offsetEncoding = { "utf-16" }
+
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
@@ -23,14 +25,14 @@ lspconfig.lua_ls.setup {
         globals = { "vim" },
       },
       format = {
-        enable = false
+        enable = false,
       },
       workspace = {
         library = {
-              [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-              [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-              [vim.fn.stdpath "data" .. "/lazy/extensions/nvchad_types"] = true,
-              [vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy"] = true,
+          [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+          [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+          [vim.fn.stdpath "data" .. "/lazy/extensions/nvchad_types"] = true,
+          [vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy"] = true,
         },
         maxPreload = 100000,
         preloadFileSize = 10000,
