@@ -11,15 +11,12 @@ M.treesitter = {
     "tsx",
     "c",
     "markdown",
-    "markdown_inline",
+    -- "markdown_inline", -- 此parser会导致在较长的markdown文档中出现打开过慢的情况.
     "python",
     "cpp",
   },
   indent = {
     enable = true,
-    -- disable = {
-    --   "python"
-    -- },
   },
 }
 
