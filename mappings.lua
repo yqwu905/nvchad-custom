@@ -25,6 +25,7 @@ M.general = {
     ["s"] = { "<cmd>HopWord<cr>", "hop" },
     ["<leader>bh"] = { move_buf_left, "move buffer left" },
     ["<leader>bl"] = { move_buf_right, "move buffer right" },
+    ["<leader>e"] = { "<cmd>e<cr>", "reload" },
     ["<leader>gg"] = { "<cmd>Neogit<cr>", "neogit" },
     ["<leader>lz"] = { "<cmd>Lazy<cr>", "lazy" },
     ["<leader>qq"] = { "<cmd>wqa<cr>", "save & quit" },

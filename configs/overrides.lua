@@ -15,9 +15,6 @@ M.treesitter = {
     "python",
     "cpp",
   },
-  indent = {
-    enable = true,
-  },
 }
 
 M.mason = {
