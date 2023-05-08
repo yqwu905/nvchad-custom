@@ -30,6 +30,9 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      { "nvim-treesitter/nvim-treesitter-context", opts = {} },
+    },
     opts = overrides.treesitter,
   },
 
@@ -142,6 +145,16 @@ local plugins = {
     init = function()
       require("core.utils").load_mappings "interestingwords"
     end,
+  },
+  {
+    "folke/persistence.nvim",
+    init = function()
+      require("core.utils").load_mappings "presistence"
+    end,
+    event = "BufReadPre",
+    opts = {
+      user = "w30044123",
+    },
   },
 }
 

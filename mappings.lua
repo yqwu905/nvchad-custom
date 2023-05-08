@@ -107,7 +107,16 @@ M.interestingwords = {
   },
   v = {
     ["#"] = { "<cmd>InteresingWordsVisualSearch<cr>", "search word" },
-  }
+  },
+}
+
+M.presistence = {
+  plugin = true,
+  n = {
+    ["<leader>qs"] = { [[<cmd>lua require("persistence").load()<cr>]] },
+    ["<leader>ql"] = { [[<cmd>lua require("persistence").load({ last = true })<cr>]] },
+    ["<leader>qd"] = { [[<cmd>lua require("persistence").stop()<cr>]] },
+  },
 }
 
 for i = 1, 9, 1 do
