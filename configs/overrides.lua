@@ -57,4 +57,13 @@ M.nvimtree = {
   },
 }
 
+M.telescope = {
+  defaults = {
+    file_ignore_patterns = {
+      "cscope.out",
+      "tags",
+    },
+  },
+}
+
 return M

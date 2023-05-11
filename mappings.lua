@@ -78,7 +78,9 @@ M.telescope = {
     ["<leader>fg"] = { "<cmd>Telescope grep_string<cr>", "grep cword" },
     ["<leader>fr"] = { "<cmd>Telescope lsp_references<cr>", "lsp reference" },
     ["<leader>fs"] = { "<cmd>Telescope lsp_workspace_symbols<cr>", "symbols" },
-    ["<leader>ft"] = { "<cmd>Telescope<cr>", "telescope" },
+    ["<leader>ft"] = { "<cmd>Telescope tags<cr>", "tags" },
+    ["<leader>fw"] = { "<cmd>Telescope live_grep<cr>", "grep cword" },
+    ["<leader>ts"] = { "<cmd>Telescope<cr>", "telescope" },
   },
 }
 
@@ -113,9 +115,27 @@ M.interestingwords = {
 M.presistence = {
   plugin = true,
   n = {
-    ["<leader>qs"] = { [[<cmd>lua require("persistence").load()<cr>]] },
-    ["<leader>ql"] = { [[<cmd>lua require("persistence").load({ last = true })<cr>]] },
-    ["<leader>qd"] = { [[<cmd>lua require("persistence").stop()<cr>]] },
+    ["<leader>qs"] = { [[<cmd>lua require("persistence").load()<cr>]], "dir session" },
+    ["<leader>ql"] = { [[<cmd>lua require("persistence").load({ last = true })<cr>]], "last session" },
+    ["<leader>qd"] = { [[<cmd>lua require("persistence").stop()<cr>]], "stop session" },
+  },
+}
+
+M.tablemode = {
+  plugin = true,
+  n = {
+    ["<leader>tm"] = { "<cmd>TableModeToggle<cr>", "table mode" },
+  },
+}
+
+M.lspconfig = {
+  v = {
+    ["<leader>fm"] = {
+      function()
+        vim.lsp.buf.format { async = true }
+      end,
+      "format",
+    },
   },
 }
 
