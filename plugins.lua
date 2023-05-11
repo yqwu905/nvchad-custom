@@ -24,6 +24,21 @@ local plugins = {
   },
 
   {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "cmake -S. -G Ninja -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+      },
+    },
+    opts = overrides.telescope,
+    config = function(_, opts)
+      require("telescope").setup(opts)
+      require("telescope").load_extension "fzf"
+    end,
+  },
+
+  {
     "williamboman/mason.nvim",
     opts = overrides.mason,
   },
@@ -146,6 +161,16 @@ local plugins = {
       require("core.utils").load_mappings "interestingwords"
     end,
   },
+
+  {
+    "dhruvasagar/vim-table-mode",
+    init = function()
+      require("core.utils").load_mappings "tablemode"
+      vim.g.table_mode_corner = "|"
+    end,
+    cmd = { "TableModeToggle" },
+  },
+
   {
     "folke/persistence.nvim",
     init = function()
