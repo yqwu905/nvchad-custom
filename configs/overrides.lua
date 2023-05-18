@@ -15,6 +15,13 @@ M.treesitter = {
     "python",
     "cpp",
   },
+  incremental_selection = {
+      enable = true,
+      keymaps = {
+        node_incremental = "v",
+        node_decremental = "V",
+      },
+  },
 }
 
 M.mason = {
