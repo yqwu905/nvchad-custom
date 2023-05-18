@@ -9,6 +9,10 @@ M.override = {
   Comment = {
     italic = true,
   },
+  Visual = {
+    fg = "white",
+    bg = "#add8e6",
+  }
 }
 
 ---@type HLTable
