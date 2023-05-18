@@ -32,8 +32,14 @@ local plugins = {
     },
     opts = overrides.telescope,
     config = function(_, opts)
-      require("telescope").setup(opts)
-      require("telescope").load_extension "fzf"
+      dofile(vim.g.base46_cache .. "telescope")
+      local telescope = require "telescope"
+      telescope.setup(opts)
+
+      -- load extensions
+      for _, ext in ipairs(opts.extensions_list) do
+        telescope.load_extension(ext)
+      end
     end,
   },
 

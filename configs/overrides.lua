@@ -64,6 +64,10 @@ M.telescope = {
       "tags",
     },
   },
+  extensions_list = {
+    "fzf",
+    "themes",
+  }
 }
 
 return M
