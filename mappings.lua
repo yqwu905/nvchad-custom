@@ -56,22 +56,6 @@ M.toggleterm = {
   },
 }
 
-M.lspconfig = {
-  plugin = true,
-  n = {
-    ["gd"] = { "<cmd>Lspsaga peek_definition<cr>", "peek definition" },
-    ["gD"] = { "<cmd>Lspsaga goto_definition<cr>", "goto definition" },
-    ["gt"] = { "<cmd>Lspsaga peek_type_definition<cr>", "peek type" },
-    ["gT"] = { "<cmd>Lspsaga goto_type_definition<cr>", "goto type" },
-    ["<leader>sl"] = { "<cmd>Lspsaga show_line_diagnostics<cr>", "line diag" },
-    ["<leader>sc"] = { "<cmd>Lspsaga show_cursor_diagnostics<cr>", "cursor diag" },
-    ["<leader>sb"] = { "<cmd>Lspsaga show_buf_diagnostics<cr>", "buffer diag" },
-    ["<Leader>ci"] = { "<cmd>Lspsaga incoming_calls<cr>", "incoming call" },
-    ["<leader>co"] = { "<cmd>Lspsaga outgoing_calls<cr>", "outgoing call" },
-    ["K"] = { "<cmd>Lspsaga hover_doc<CR>", "hover_doc" },
-  },
-}
-
 M.telescope = {
   plugin = true,
   n = {
@@ -129,6 +113,21 @@ M.tablemode = {
 }
 
 M.lspconfig = {
+  plugin = true,
+  n = {
+    ["gd"] = { "<cmd>Lspsaga peek_definition<cr>", "peek definition" },
+    ["gD"] = { "<cmd>Lspsaga goto_definition<cr>", "goto definition" },
+    ["gt"] = { "<cmd>Lspsaga peek_type_definition<cr>", "peek type" },
+    ["gT"] = { "<cmd>Lspsaga goto_type_definition<cr>", "goto type" },
+    ["gh"] = {"<cmd>Lspsaga lsp_finder<cr>", "lsp finder"},
+    ["<leader>sl"] = { "<cmd>Lspsaga show_line_diagnostics<cr>", "line diag" },
+    ["<leader>sc"] = { "<cmd>Lspsaga show_cursor_diagnostics<cr>", "cursor diag" },
+    ["<leader>sb"] = { "<cmd>Lspsaga show_buf_diagnostics<cr>", "buffer diag" },
+    ["<Leader>ci"] = { "<cmd>Lspsaga incoming_calls<cr>", "incoming call" },
+    ["<leader>co"] = { "<cmd>Lspsaga outgoing_calls<cr>", "outgoing call" },
+    ["K"] = { "<cmd>Lspsaga hover_doc<CR>", "hover_doc" },
+  },
+
   v = {
     ["<leader>fm"] = {
       function()
