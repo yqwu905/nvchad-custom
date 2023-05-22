@@ -47,7 +47,5 @@ lspconfig.clangd.setup {
   cmd = {
     'clangd',
     '--pch-storage=memory',
-    '--limit-references=0',
-    '--limit-results=0',
   }
 }
