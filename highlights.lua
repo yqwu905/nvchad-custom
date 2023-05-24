@@ -11,7 +11,8 @@ M.override = {
   },
   Visual = {
     fg = "white",
-    bg = "#add8e6",
+    -- bg = "#add8e6",
+    bg = "red",
   }
 }
 
