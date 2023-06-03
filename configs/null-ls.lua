@@ -13,7 +13,7 @@ local sources = {
   b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
 
   -- Lua
-  -- b.formatting.stylua,
+  b.formatting.stylua,
 
   -- cpp
   -- b.formatting.clang_format,

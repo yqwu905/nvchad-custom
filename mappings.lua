@@ -64,7 +64,7 @@ M.telescope = {
     ["<leader>fr"] = { "<cmd>Telescope lsp_references<cr>", "lsp reference" },
     ["<leader>fs"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "symbols" },
     ["<leader>ft"] = { "<cmd>Telescope tags<cr>", "tags" },
-    ["<leader>fw"] = { "<cmd>Telescope live_grep<cr>", "grep cword" },
+    ["<leader>fw"] = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "grep cword" },
     ["<leader>ts"] = { "<cmd>Telescope<cr>", "telescope" },
   },
 }
