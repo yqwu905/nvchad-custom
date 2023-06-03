@@ -31,7 +31,6 @@ M.general = {
     ["<leader>qq"] = { "<cmd>wqa<cr>", "save & quit" },
     ["<leader>rr"] = { utils.async_run_code, "run code" },
     ["<leader>so"] = { "<cmd>SymbolsOutline<cr>", "outline" },
-    ["<leader>st"] = {utils.sort_qflist, "sort qflist" },
     ["<leader>tp"] = { toggle_transparency, "toggle transparency" },
     ["<leader>tt"] = { toggle_theme, "toggle theme" },
   },
