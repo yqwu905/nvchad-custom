@@ -156,21 +156,6 @@ local plugins = {
   },
 
   {
-    "yqwu905/interestingwords.nvim",
-    opts = {},
-    cmd = {
-      "InteresingWordsNormalSearch",
-      "InteresingWordsJumpPrev",
-      "InteresingWordsJumpNext",
-      "InteresingWordsClearHighlight",
-      "InteresingWordsVisualSearch",
-    },
-    init = function()
-      require("core.utils").load_mappings "interestingwords"
-    end,
-  },
-
-  {
     "dhruvasagar/vim-table-mode",
     init = function()
       require("core.utils").load_mappings "tablemode"
@@ -221,6 +206,14 @@ local plugins = {
     end,
   },
 
+  {
+    "dvoytik/hi-my-words.nvim",
+    opts = {},
+    cmd = { "HiMyWordsToggle", "HiMyWordsClear" },
+    init = function()
+      require("core.utils").load_mappings "hi_my_words"
+    end,
+  },
 }
 
 return plugins

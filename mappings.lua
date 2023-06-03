@@ -83,16 +83,11 @@ M.gitsigns = {
   },
 }
 
-M.interestingwords = {
+M.hi_my_words = {
   plugin = true,
   n = {
-    ["#"] = { "<cmd>InteresingWordsNormalSearch<cr>", "search word" },
-    ["N"] = { "<cmd>InteresingWordsJumpPrev<cr>", "prev match" },
-    ["n"] = { "<cmd>InteresingWordsJumpNext<cr>", "next match" },
-    ["<esc>"] = { "<cmd>InteresingWordsClearHighlight<cr>", "clear search" },
-  },
-  v = {
-    ["#"] = { "<cmd>InteresingWordsVisualSearch<cr>", "search word" },
+    ["#"] = { "<cmd>HiMyWordsToggle<cr>", "highlight all occurence" },
+    ["<esc>"] = { "<cmd>HiMyWordsToggle<cr>", "remove highlight" },
   },
 }
 
@@ -117,7 +112,7 @@ M.lspconfig = {
   n = {
     ["gd"] = { "<cmd>Lspsaga peek_definition<cr>", "peek definition" },
     ["gD"] = { "<cmd>Lspsaga goto_definition<cr>", "goto definition" },
-    ["gh"] = {"<cmd>Lspsaga lsp_finder<cr>", "lsp finder"},
+    ["gh"] = { "<cmd>Lspsaga lsp_finder<cr>", "lsp finder" },
     ["<leader>sl"] = { "<cmd>Lspsaga show_line_diagnostics<cr>", "line diag" },
     ["<leader>sc"] = { "<cmd>Lspsaga show_cursor_diagnostics<cr>", "cursor diag" },
     ["<leader>sb"] = { "<cmd>Lspsaga show_buf_diagnostics<cr>", "buffer diag" },
