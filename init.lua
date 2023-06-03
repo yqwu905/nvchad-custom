@@ -12,6 +12,8 @@ autocmd("TextYankPost", {
 })
 
 vim.opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -33,3 +35,4 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.o.guifont = "JetBrainsMono Nerd Font:h12"
 end
+

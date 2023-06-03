@@ -29,6 +29,9 @@ local plugins = {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "cmake -S. -G Ninja -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
       },
+      {
+        "nvim-telescope/telescope-live-grep-args.nvim",
+      },
     },
     opts = overrides.telescope,
     config = function(_, opts)
@@ -191,7 +194,7 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     ft = { "gitcommit", "diff" },
     dependencies = {
-        "f-person/git-blame.nvim",
+      "f-person/git-blame.nvim",
     },
     init = function()
       -- load gitsigns only when a git file is opened

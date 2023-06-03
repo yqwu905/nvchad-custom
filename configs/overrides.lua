@@ -74,6 +74,7 @@ M.telescope = {
   extensions_list = {
     "fzf",
     "themes",
+        "live_grep_args"
   }
 }
 

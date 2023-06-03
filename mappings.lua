@@ -31,6 +31,7 @@ M.general = {
     ["<leader>qq"] = { "<cmd>wqa<cr>", "save & quit" },
     ["<leader>rr"] = { utils.async_run_code, "run code" },
     ["<leader>so"] = { "<cmd>SymbolsOutline<cr>", "outline" },
+    ["<leader>st"] = {utils.sort_qflist, "sort qflist" },
     ["<leader>tp"] = { toggle_transparency, "toggle transparency" },
     ["<leader>tt"] = { toggle_theme, "toggle theme" },
   },
@@ -61,9 +62,9 @@ M.telescope = {
   n = {
     ["<leader>fg"] = { "<cmd>Telescope grep_string<cr>", "grep cword" },
     ["<leader>fr"] = { "<cmd>Telescope lsp_references<cr>", "lsp reference" },
-    ["<leader>fs"] = { "<cmd>Telescope lsp_workspace_symbols<cr>", "symbols" },
+    ["<leader>fs"] = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "symbols" },
     ["<leader>ft"] = { "<cmd>Telescope tags<cr>", "tags" },
-    ["<leader>fw"] = { "<cmd>Telescope live_grep<cr>", "grep cword" },
+    ["<leader>fw"] = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "grep cword" },
     ["<leader>ts"] = { "<cmd>Telescope<cr>", "telescope" },
   },
 }
@@ -117,8 +118,6 @@ M.lspconfig = {
   n = {
     ["gd"] = { "<cmd>Lspsaga peek_definition<cr>", "peek definition" },
     ["gD"] = { "<cmd>Lspsaga goto_definition<cr>", "goto definition" },
-    ["gt"] = { "<cmd>Lspsaga peek_type_definition<cr>", "peek type" },
-    ["gT"] = { "<cmd>Lspsaga goto_type_definition<cr>", "goto type" },
     ["gh"] = {"<cmd>Lspsaga lsp_finder<cr>", "lsp finder"},
     ["<leader>sl"] = { "<cmd>Lspsaga show_line_diagnostics<cr>", "line diag" },
     ["<leader>sc"] = { "<cmd>Lspsaga show_cursor_diagnostics<cr>", "cursor diag" },
