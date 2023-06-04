@@ -207,7 +207,7 @@ local plugins = {
     },
 
     {
-        "dvoytik/hi-my-words.nvim",
+        "yqwu905/hi-my-words.nvim",
         opts = {},
         cmd = { "HiMyWordsToggle", "HiMyWordsClear" },
         init = function()
