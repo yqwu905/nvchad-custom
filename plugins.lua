@@ -214,6 +214,17 @@ local plugins = {
             require("core.utils").load_mappings "hi_my_words"
         end,
     },
+
+    {
+        "ahmedkhalf/project.nvim",
+        event = "VeryLazy",
+        opts = {
+            patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", ".mm" },
+        },
+        config = function(_, opts)
+            require("project_nvim").setup(opts)
+        end,
+    },
 }
 
 return plugins

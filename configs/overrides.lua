@@ -51,6 +51,12 @@ M.mason = {
 
 -- git support in nvimtree
 M.nvimtree = {
+    sync_root_with_cwd = true,
+    respect_buf_cwd = true,
+    update_focused_file = {
+        enable = true,
+        update_root = true,
+    },
     git = {
         enable = true,
     },
@@ -74,6 +80,7 @@ M.telescope = {
     extensions_list = {
         "fzf",
         "themes",
+        "projects",
         "live_grep_args",
     },
 }

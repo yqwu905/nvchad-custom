@@ -67,6 +67,7 @@ M.telescope = {
             "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
             "grep cword",
         },
+        ["<leader>fp"] = { "<cmd>lua require'telescope'.extensions.projects.projects{}<cr>", "projects" },
         ["<leader>ts"] = { "<cmd>Telescope<cr>", "telescope" },
     },
 }
