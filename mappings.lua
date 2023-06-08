@@ -91,7 +91,7 @@ M.hi_my_words = {
     plugin = true,
     n = {
         ["#"] = { "<cmd>HiMyWordsToggle<cr>", "highlight all occurence" },
-        ["<esc>"] = { "<cmd>HiMyWordsClear<cr>", "remove highlight" },
+        ["<leader>m"] = { "<cmd>HiMyWordsClear<cr>", "remove highlight" },
     },
 }
 
