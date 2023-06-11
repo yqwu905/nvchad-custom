@@ -219,7 +219,8 @@ local plugins = {
         "ahmedkhalf/project.nvim",
         event = "VeryLazy",
         opts = {
-            patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", ".mm" },
+            patterns = { ".git", ".svn", "Makefile", "package.json", ".mm" },
+            detection_methods = { "pattern" },
         },
         config = function(_, opts)
             require("project_nvim").setup(opts)
