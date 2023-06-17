@@ -16,6 +16,7 @@ local sources = {
     b.formatting.stylua,
 
     -- cpp
+    b.formatting.yapf,
     -- b.formatting.clang_format,
 }
 
