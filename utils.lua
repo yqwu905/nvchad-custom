@@ -22,23 +22,34 @@ utils.runner = {
 }
 
 function utils.async_run_code()
-    local function is_run_script(path)
-        return string.match(path, "_nvim_run_?.*%.ps1")
-    end
+    local script_ext = nil
+    local script_runner = ""
     local run_scripts = {}
-    for file in vim.fs.dir(vim.fn.getcwd()) do
-        if is_run_script(file) then
-            table.insert(run_scripts, file)
+    if vim.fn.has "linux" then
+        script_ext = "sh"
+        script_runner = "bash "
+    elseif vim.fn.has "windows" then
+        script_ext = "ps1"
+        script_runner = ".\\"
+    end
+    if script_ext ~= nil then
+        local function is_run_script(path)
+            return string.match(path, "_nvim_run_?.*%." .. script_ext)
+        end
+        for file in vim.fs.dir(vim.fn.getcwd()) do
+            if is_run_script(file) then
+                table.insert(run_scripts, file)
+            end
         end
     end
     if #run_scripts > 0 then
         if #run_scripts == 1 then
-            require("toggleterm").exec(".\\" .. run_scripts[1] .. " " .. vim.fn.expand "%:t")
+            require("toggleterm").exec(script_runner .. run_scripts[1] .. " " .. vim.fn.expand "%:t")
         else
             vim.ui.select(run_scripts, {
                 prompt = "Choose run script",
                 format_item = function(item)
-                    local name = string.match(item, "_nvim_run_?(.*)%.ps1")
+                    local name = string.match(item, "_nvim_run_?(.*)%." .. script_ext)
                     if #name == 0 then
                         return "Default"
                     end
@@ -49,7 +60,7 @@ function utils.async_run_code()
                     vim.notify "Abort run"
                     return
                 end
-                require("toggleterm").exec(".\\" .. choice .. " " .. vim.fn.expand "%:t")
+                require("toggleterm").exec(script_runner .. choice .. " " .. vim.fn.expand "%:t")
             end)
         end
     elseif utils.runner[vim.bo.filetype] ~= nil then
