@@ -16,6 +16,9 @@ utils.runner = {
     rust = function()
         return "cargo run"
     end,
+    sh = function()
+        return "bash " .. vim.fn.expand "%"
+    end,
 }
 
 function utils.async_run_code()
