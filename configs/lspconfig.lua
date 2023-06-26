@@ -1,7 +1,7 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
--- capabilities.offsetEncoding = { "utf-16" }
+capabilities.offsetEncoding = { "utf-16" }
 
 local lspconfig = require "lspconfig"
 
