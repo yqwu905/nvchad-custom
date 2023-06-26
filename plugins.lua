@@ -223,6 +223,7 @@ local plugins = {
         "ahmedkhalf/project.nvim",
         event = "VeryLazy",
         opts = {
+            manual_mode = true,
             patterns = { ".git", ".svn", "Makefile", "package.json", ".mm" },
             detection_methods = { "pattern" },
         },
