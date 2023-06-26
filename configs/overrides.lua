@@ -75,6 +75,7 @@ M.telescope = {
         file_ignore_patterns = {
             "cscope.out",
             "tags",
+            "output/*",
         },
     },
     extensions_list = {
