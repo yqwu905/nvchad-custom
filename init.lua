@@ -50,3 +50,5 @@ if vim.fn.has "wsl" then
         cache_enabled = 0,
     }
 end
+
+vim.cmd("set noswapfile")
