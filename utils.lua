@@ -2,10 +2,10 @@ local utils = {}
 
 utils.runner = {
     c = function()
-        return "clang -o a.exe " .. vim.fn.expand "%" .. " && .\\a.exe"
+        return "clang -o a.exe " .. vim.fn.expand "%" .. " && ./a.exe"
     end,
     cpp = function()
-        return "clang++ -std=c++11 -o a.exe " .. vim.fn.expand "%" .. " && .\\a.exe"
+        return "clang++ -std=c++11 -o a.exe " .. vim.fn.expand "%" .. " && ./a.exe"
     end,
     python = function()
         return "python " .. vim.fn.expand "%"
