@@ -17,7 +17,7 @@ local sources = {
 
     -- cpp
     b.formatting.yapf,
-    -- b.formatting.clang_format,
+    b.formatting.clang_format,
 }
 
 null_ls.setup {
