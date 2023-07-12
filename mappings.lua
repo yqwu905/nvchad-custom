@@ -114,15 +114,11 @@ M.tablemode = {
 M.lspconfig = {
     plugin = true,
     n = {
-        ["gd"] = { "<cmd>Lspsaga peek_definition<cr>", "peek definition" },
-        ["gD"] = { "<cmd>Lspsaga goto_definition<cr>", "goto definition" },
-        ["gh"] = { "<cmd>Lspsaga finder def+ref<cr>", "lsp finder" },
-        ["<leader>sl"] = { "<cmd>Lspsaga show_line_diagnostics<cr>", "line diag" },
-        ["<leader>sc"] = { "<cmd>Lspsaga show_cursor_diagnostics<cr>", "cursor diag" },
-        ["<leader>sb"] = { "<cmd>Lspsaga show_buf_diagnostics<cr>", "buffer diag" },
-        ["<Leader>ci"] = { "<cmd>Lspsaga incoming_calls<cr>", "incoming call" },
-        ["<leader>co"] = { "<cmd>Lspsaga outgoing_calls<cr>", "outgoing call" },
-        ["K"] = { "<cmd>Lspsaga hover_doc<CR>", "hover_doc" },
+        ["gd"] = { "<cmd>Glance definitions<cr>", "peek definition" },
+        ["gD"] = { "<cmd>lua vim.lsp.buf.definition()<cr>", "goto definition" },
+        ["gh"] = { "<cmd>Glance references<cr>", "lsp finder" },
+        ["<Leader>ci"] = { "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", "incoming call" },
+        ["<leader>co"] = { "<cmd>lua vim.lsp.buf.outgoing_calls<cr>", "outgoing call" },
     },
 
     v = {

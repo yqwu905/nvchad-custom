@@ -12,10 +12,6 @@ local plugins = {
                     require "custom.configs.null-ls"
                 end,
             },
-            {
-                "nvimdev/lspsaga.nvim",
-                opts = {},
-            },
         },
         config = function()
             require "custom.configs.lspconfig"
@@ -230,6 +226,22 @@ local plugins = {
         config = function(_, opts)
             require("project_nvim").setup(opts)
         end,
+    },
+
+    {
+        "DNLHC/glance.nvim",
+        opts = {
+            border = {
+                enable = true,
+            },
+        },
+        cmd = "Glance",
+    },
+
+    {
+        "anuvyklack/pretty-fold.nvim",
+        opts = {},
+        key = { "z" },
     },
 }
 
