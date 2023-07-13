@@ -151,8 +151,16 @@ local plugins = {
 
     {
         "kevinhwang91/nvim-bqf",
+        ft = { "qf" },
+        dependencies = {
+            {
+                "junegunn/fzf",
+                build = function()
+                    vim.fn["fzf#install"]()
+                end,
+            },
+        },
         opts = {},
-        event = "VeryLazy",
     },
 
     {
@@ -243,6 +251,7 @@ local plugins = {
         opts = {},
         key = { "z" },
     },
+
 }
 
 return plugins
