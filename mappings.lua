@@ -46,13 +46,21 @@ M.toggleterm = {
     plugin = true,
     n = {
         ["<a-h>"] = { "<cmd>ToggleTerm direction=horizontal<cr>", "hterm" },
-        ["<a-i>"] = { "<cmd>ToggleTerm direction=float<cr>", "hterm" },
-        ["<a-v>"] = { "<cmd>ToggleTerm direction=vertical<cr>", "hterm" },
+        ["<a-i>"] = { "<cmd>ToggleTerm direction=float<cr>", "fterm" },
+        ["<a-v>"] = { "<cmd>ToggleTerm direction=vertical<cr>", "vterm" },
+        ["<a-1>"] = { "<cmd>1ToggleTerm<cr>", "toggle term 1" },
+        ["<a-2>"] = { "<cmd>2ToggleTerm<cr>", "toggle term 2" },
+        ["<a-3>"] = { "<cmd>3ToggleTerm<cr>", "toggle term 3" },
+        ["<a-4>"] = { "<cmd>4ToggleTerm<cr>", "toggle term 4" },
     },
     t = {
         ["<a-h>"] = { "<cmd>ToggleTerm direction=horizontal<cr>", "hterm" },
         ["<a-i>"] = { "<cmd>ToggleTerm direction=float<cr>", "hterm" },
         ["<a-v>"] = { "<cmd>ToggleTerm direction=vertical<cr>", "hterm" },
+        ["<a-1>"] = { "<cmd>1ToggleTerm<cr>", "toggle term 1" },
+        ["<a-2>"] = { "<cmd>2ToggleTerm<cr>", "toggle term 2" },
+        ["<a-3>"] = { "<cmd>3ToggleTerm<cr>", "toggle term 3" },
+        ["<a-4>"] = { "<cmd>4ToggleTerm<cr>", "toggle term 4" },
     },
 }
 
@@ -130,11 +138,5 @@ M.lspconfig = {
         },
     },
 }
-
-for i = 1, 9, 1 do
-    vim.keymap.set("n", string.format("<A-%s>", i), function()
-        vim.api.nvim_set_current_buf(vim.t.bufs[i])
-    end)
-end
 
 return M
